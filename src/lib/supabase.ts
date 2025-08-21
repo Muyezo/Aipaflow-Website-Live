@@ -10,6 +10,7 @@ export const supabase = supabaseUrl && supabaseAnonKey
       auth: {
         autoRefreshToken: true,
         persistSession: true,
+        detectSessionInUrl: true, // important for magic link / OAuth
       },
     })
   : null;
